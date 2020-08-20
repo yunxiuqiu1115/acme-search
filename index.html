@@ -60,15 +60,11 @@
           console.log(value.matching_terms);
           if (value.matching_terms.includes(expression)) {
             console.log("true!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            $("#result").append(
-              '<li class="list-group-item link-class"><img src="' +
-                value.id +
-                '" height="40" width="40" class="img-thumbnail" /> ' +
-                value.name +
-                ' | <span class="text-muted">' +
-                value.title +
-                "</span></li>"
-            );
+            $("#result").append('<li class="list-group-item link-class">');
+            for (const key of Object.keys(value)) {
+              $("#result").append(key + " " + value.key + " ");
+            }
+            $("#result").append("</li>");
           }
         });
       });
