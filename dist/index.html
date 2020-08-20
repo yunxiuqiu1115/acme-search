@@ -56,6 +56,7 @@
       $.getJSON("data.json", function (data) {
         $.each(data, function (key, value) {
           if (value.matching_terms.includes(expression)) {
+            console.log("true!!!!!!!!!!!!!!!!!!!!!!!!!!");
             $("#result").append(
               '<li class="list-group-item link-class"><img src="' +
                 value.id +
