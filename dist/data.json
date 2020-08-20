@@ -1,87 +1,142 @@
 [
   {
-    "name": "Angel Lewis",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/0d4/2f7/07a3d35.jpg",
-    "location": "Seattle, WA"
+    "id": "12345",
+    "title": "Acme Proposal Meeting",
+    "invitees": "dave, john, bob, carol",
+    "matching_terms": ["dave", "john", "bob", "carol", "acme"],
+    "date": "2019-01-10 10:00:00"
   },
   {
-    "name": "Justin Dean",
-    "image": "https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAIMAAAAJGExNTE4OWY4LWU4ODMtNDA2ZS1iNWI1LWNkYmIyOWMyMGQ5Zg.jpg",
-    "location": "Muscatine, IA"
+    "id": "12345",
+    "title": "Acme Final Delivery Meeting",
+    "invitees": "dave, john, bob, alice",
+    "matching_terms": ["dave", "john", "bob", "alice", "acme"],
+    "date": "2019-03-01 11:00:00"
   },
   {
-    "name": "Nora Blake",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/005/0b8/118/387e091.jpg",
-    "location": "Seattle, WA"
+    "id": "12345",
+    "name": "John Doe",
+    "company": "Acme Inc",
+    "emails": ["john@acme.co", "doe@gmail.com"],
+    "phones": ["650-555-5555", "+44 171 5555 5555"],
+    "matching_terms": ["acme", "john", "john doe"],
+    "last_contact": "2019-02-26"
   },
   {
-    "name": "Russell Fox",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/084/26e/2d9e05b.jpg",
-    "location": "Albuquerque, NM"
+    "id": "31456",
+    "name": "Robert Roe",
+    "company": "Acme Inc",
+    "emails": ["bob@acme.co"],
+    "phones": ["+44 171 6666 5555"],
+    "matching_terms": ["acme", "robert", "roe", "bob"],
+    "last_contact": "2019-02-29"
   },
   {
-    "name": "Daryl Bradley",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/042/0ad/197566e.jpg",
-    "location": "Buckeystown, MD"
+    "id": "787661",
+    "name": "Alice Smith",
+    "company": "Other Corp",
+    "emails": ["alice@other.co"],
+    "phones": ["+1 415 555 6666"],
+    "matching_terms": ["alice", "other", "alice smith"],
+    "last_contact": "2019-02-29"
   },
   {
-    "name": "Benjamin Gonzales",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/005/0b2/1c9/2a423c1.jpg",
-    "location": "Atlanta, GA"
+    "id": "12345",
+    "path": "/taxes/2016/w2-acme.pdf",
+    "title": "\"2016 W2\"",
+    "shared_with": ["jane@accountants.com", "spouse@family.org"],
+    "matching_terms": ["tax", "w2", "alice"],
+    "created": "2016-02-01"
   },
   {
-    "name": "Viola Francis",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAASJAAAAJGMyMTUzN2EyLTExY2ItNDZiNS1hMTY1LTI4NDA2NDMwZmFkNg.jpg",
-    "location": "Zanesville, OH"
+    "id": "34567",
+    "path": "/work/customers/acme/invoice.docx",
+    "title": "\"ACME Corp: Invoice\"",
+    "shared_with": ["acme-accounts@mycompany.com"],
+    "matching_terms": ["acme", "invoice"],
+    "created": "2019-02-01"
   },
   {
-    "name": "Reginald Benson",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/10f/3cc/275a407.jpg",
-    "location": "Gilbert, AZ"
+    "id": "56789",
+    "path": "/purchases/2016/fridge.pdf",
+    "title": "\"Best Buy: Invoice\"",
+    "matching_terms": ["invoice"],
+    "created": "2019-02-01"
   },
   {
-    "name": "Glenda Ray",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/005/0ac/1ca/07c25a2.jpg",
-    "location": "Baltimore, MD"
+    "id": "3456789",
+    "path": "/work/customers/acme/proposal.docx",
+    "title": "\"ACME Corp: Draft MoU\"",
+    "shared_with": ["acme-accounts@mycompany.com"],
+    "matching_terms": ["acme", "proposal", "mou"],
+    "created": "2019-01-19"
   },
   {
-    "name": "Paula Vargas",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/005/03e/073/36a5c47.jpg",
-    "location": "Baltimore, MD"
+    "id": "3556789",
+    "path": "/work/customers/acme/meeting-notes.docx",
+    "title": "\"ACME Corp: Meeting Notes\"",
+    "shared_with": ["acme-accounts@mycompany.com"],
+    "matching_terms": ["acme", "meeting notes"],
+    "created": "2019-02-04"
   },
   {
-    "name": "Mark Armstrong",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/005/010/09b/39b122d.jpg",
-    "location": "Hallandale Beach, FL"
+    "id": "12345",
+    "channel": "chatter",
+    "author": "alice",
+    "message": "Who's up for lunch right now?",
+    "timestamp": "2019-02-26 11:00:00",
+    "matching_terms": ["alice", "chatter", "lunch"]
   },
   {
-    "name": "Jaime Campbell",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAATUAAAAJDJkY2Q1Mzk0LTI1YzItNDFhNy04ZmQ0LWY3NzZlZTZlNGVmYw.jpg",
-    "location": "Zanesville, OH"
+    "id": "12346",
+    "channel": "chatter",
+    "author": "bob",
+    "message": "I am up for lunch!",
+    "timestamp": "2019-02-26 11:00:01",
+    "matching_terms": ["bob", "chatter", "lunch"]
   },
   {
-    "name": "Mike Beck",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/01c/0d4/2b69e7c.jpg",
-    "location": "Garner, NC"
+    "id": "12347",
+    "channel": "chatter",
+    "author": "carol",
+    "message": "Me too @alice!",
+    "timestamp": "2019-02-26 11:00:02",
+    "matching_terms": ["carol", "chatter", "alice"]
   },
   {
-    "name": "Ann Lowe",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/000/1f6/019/29cd853.jpg",
-    "location": "Cabin John, MD"
+    "id": "22345",
+    "channel": "customer-chatter",
+    "author": "alice",
+    "message": "Did any of you meet with Acme folks last week?",
+    "timestamp": "2019-02-26 12:00:00",
+    "matching_terms": ["alice", "customer-chatter", "acme"]
   },
   {
-    "name": "Ryan Wolfe",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/0bf/335/05a57f6.jpg",
-    "location": "Los Angeles, CA"
+    "id": "22346",
+    "channel": "customer-chatter",
+    "author": "dave",
+    "message": "Yeah, I met with Bob there",
+    "timestamp": "2019-02-26 12:00:01",
+    "matching_terms": ["dave", "customer-chatter", "bob"]
   },
   {
-    "name": "Dwayne Gutierrez",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/29b/028/2426536.jpg",
-    "location": "San Jose, CA"
+    "id": "22347",
+    "channel": "customer-chatter",
+    "author": "dave",
+    "message": "I think John from Acme was in that meeting too",
+    "timestamp": "2019-02-26 12:00:02",
+    "matching_terms": ["dave", "john", "acme"]
   },
   {
-    "name": "Bill Burke",
-    "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/000/1bc/12e/1423106.jpg",
-    "location": "Bakersfield, CA"
+    "user": "@acmecorp",
+    "message": "We're hiring in Boston!",
+    "timestamp": "2019-02-29",
+    "matching_terms": ["acme", "hiring", "boston"]
+  },
+  {
+    "user": "@acmecorp",
+    "message": "We're no longer hiring in Timbuktu",
+    "timestamp": "2019-02-27",
+    "matching_terms": ["acme", "hiring", "timbuktu"]
   }
 ]

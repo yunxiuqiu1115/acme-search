@@ -2,7 +2,7 @@
   "name": "acme-search",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "homepage": "https://yunxiuqiu1115.github.io/acme-search",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
