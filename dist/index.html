@@ -55,6 +55,9 @@
       var expression = new RegExp(searchField, "i");
       $.getJSON("data.json", function (data) {
         $.each(data, function (key, value) {
+          console.log("******************DEBUG******************");
+          console.log("Expression: " + expression);
+          console.log(value.matching_terms);
           if (value.matching_terms.includes(expression)) {
             console.log("true!!!!!!!!!!!!!!!!!!!!!!!!!!");
             $("#result").append(
