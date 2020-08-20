@@ -55,7 +55,7 @@
       var expression = new RegExp(searchField, "i");
       $.getJSON("data.json", function (data) {
         $.each(data, function (key, value) {
-          if (value.matching_terms.search(expression) != -1) {
+          if (value.matching_terms.includes(expression)) {
             $("#result").append(
               '<li class="list-group-item link-class"><img src="' +
                 value.id +
