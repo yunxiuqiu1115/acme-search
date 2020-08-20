@@ -52,7 +52,7 @@
       $("#result").html("");
       $("#state").val("");
       var searchField = $("#search").val();
-      var expression = new RegExp(searchField, "i");
+      var expression = searchField;
       $.getJSON("data.json", function (data) {
         $.each(data, function (key, value) {
           console.log("******************DEBUG******************");
