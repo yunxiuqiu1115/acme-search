@@ -6,7 +6,7 @@
 #result {
   position: absolute;
   width: 100%;
-  max-width: 100%;
+  max-width: 870px;
   cursor: pointer;
   overflow-y: auto;
   max-height: 400px;
