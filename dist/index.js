@@ -83,4 +83,69 @@ $(document).ready(function () {
       $(".loading").show();
     });
   });
+
+  // Select DOM Items
+  const menuBtn = $(".menu-btn");
+  const menu = $(".menu");
+  const menuNav = $(".menu-nav");
+  const menuBranding = $(".menu-branding");
+  let showMenu = false;
+  menuBtn.on("click", function () {
+    if (!showMenu) {
+      menuBtn.addClass("close");
+      menu.addClass("show");
+      menuNav.addClass("show");
+      menuBranding.addClass("show");
+
+      showMenu = true;
+      let favorites;
+      if (localStorage.getItem("favorites") != null) {
+        favorites = JSON.parse(localStorage.getItem("favorites"));
+      } else {
+        favorites = {};
+      }
+      $.getJSON("data.json", function (data) {
+        $.each(data, function (key, value) {
+          if (favorites.hasOwnProperty("addMe" + value["index"])) {
+            let text = "";
+            for (const key of Object.keys(value)) {
+              if (key === "matching_terms" || key === "index") continue;
+              text +=
+                "<b style='color:#800020'>" +
+                key +
+                ": </b>" +
+                value[key] +
+                " | ";
+            }
+            entry =
+              '<li class="list-group-item link-class favorite-list-item"> ' +
+              " " +
+              text +
+              " " +
+              '<button class="unfavoriteMe" id="addMe' +
+              value["index"] +
+              '">Unfavorite</button></li>';
+            $("#favorite-list").append(entry);
+          }
+        });
+      });
+      $("#result").empty();
+    } else {
+      menuBtn.removeClass("close");
+      menu.removeClass("show");
+      menuNav.removeClass("show");
+      menuBranding.removeClass("show");
+      $("#favorite-list").empty();
+      showMenu = false;
+    }
+    $("#favorite-list").on("click", "li", function () {
+      $("li").on("click", ".unfavoriteMe", function () {
+        let favorites = JSON.parse(localStorage.getItem("favorites"));
+        delete favorites[`${$(this).attr("id")}`];
+        $(this).hide();
+        $(this).closest("li").remove();
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+      });
+    });
+  });
 });
