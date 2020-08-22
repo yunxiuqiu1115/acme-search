@@ -2,7 +2,7 @@ $(document).ready(function () {
   $.ajaxSetup({ cache: false });
   $(".search-icon").on("click", function () {
     $(".loading").hide();
-    $("#result").html("");
+    $("#result").empty();
     $("#state").val("");
     let searchField = $("#search").val();
     let expression = searchField;
@@ -18,23 +18,26 @@ $(document).ready(function () {
           let set = {};
           if (localStorage.getItem("favorites") != null)
             set = JSON.parse(localStorage.getItem("favorites"));
-          let entry =
-            '<li class="list-group-item link-class"> ' +
-            " " +
-            text +
-            " " +
-            '<button class="addMe" id="addMe' +
-            value["index"] +
-            '">Add</button>' +
-            '<button class="deleteMe">Remove</button>' +
-            '<button class="markMe">Mark</button>' +
-            '<button class="unmarkMe">Unmark</button>' +
-            '<button class="pinMe">Pin</button></li>';
+          let entry;
           if (set.hasOwnProperty("addMe" + value["index"])) {
             entry =
+              '<li class="list-group-item link-class"> ' +
               " " +
               text +
               " " +
+              '<button class="deleteMe">Remove</button>' +
+              '<button class="markMe">Mark</button>' +
+              '<button class="unmarkMe">Unmark</button>' +
+              '<button class="pinMe">Pin</button></li>';
+          } else {
+            entry =
+              '<li class="list-group-item link-class"> ' +
+              " " +
+              text +
+              " " +
+              '<button class="addMe" id="addMe' +
+              value["index"] +
+              '">Add</button>' +
               '<button class="deleteMe">Remove</button>' +
               '<button class="markMe">Mark</button>' +
               '<button class="unmarkMe">Unmark</button>' +
